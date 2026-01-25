@@ -3,182 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VUXMAZ Inc. | The Next Frontier of Computing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <title>VUXMAZ | Strategic Stealth Mode</title>
     <style>
-        :root {
-            --bg: #0a0a0a;
-            --text: #e0e0e0;
-            --accent: #ffffff;
-            --gray: #2a2a2a;
-            --highlight: #0070f3;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
+        /* ADN VISUAL ORIGINAL */
+        body { 
+            background-color: #030303; 
+            color: #f0f0f0; 
+            font-family: 'Inter', -apple-system, sans-serif; 
             margin: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
+            padding: 0;
+            scroll-behavior: smooth;
         }
 
-        header {
-            height: 100vh;
+        /* NAVEGACIÓN ESTILO APPLE / FRONTERA TECH */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(3, 3, 3, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #1a1a1a;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            border-bottom: 1px solid var(--gray);
+            padding: 15px 0;
+            z-index: 1000;
         }
-
-        .stealth-badge {
-            font-family: 'JetBrains Mono', monospace;
+        nav a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 20px;
             font-size: 0.8rem;
-            letter-spacing: 3px;
-            color: var(--highlight);
-            margin-bottom: 20px;
             text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -2px;
-        }
-
-        .hero-subtext {
-            max-width: 800px;
-            font-size: 1.2rem;
-            color: #888;
-            margin-top: 20px;
-        }
-
-        section {
-            padding: 100px 10vw;
-            border-bottom: 1px solid var(--gray);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .card {
-            background: #111;
-            padding: 40px;
-            border: 1px solid var(--gray);
+            letter-spacing: 2px;
             transition: 0.3s;
         }
+        nav a:hover { color: #00e5ff; }
 
-        .card:hover {
-            border-color: var(--highlight);
-        }
+        .container { max-width: 900px; margin: auto; padding: 120px 20px 60px 20px; }
+        .logo { width: 100%; max-width: 500px; margin-bottom: 40px; display: block; margin-left: auto; margin-right: auto; }
+        .tagline { color: #00e5ff; font-size: 1.1rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 50px; text-align: center; }
 
-        .job-title {
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+        section { padding: 80px 0; border-bottom: 1px solid #111; }
+        h2 { color: #00e5ff; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; text-align: center; }
 
-        .job-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            background: var(--gray);
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
+        /* MISION Y VISION */
+        .grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left; }
+        .grid-info h3 { font-size: 0.9rem; color: #555; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        .grid-info p { line-height: 1.8; color: #ccc; }
 
-        .footer {
-            padding: 50px 10vw;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-        }
+        /* LIDERAZGO */
+        .leader { padding: 40px 0; text-align: center; }
+        .leader-name { font-size: 1.6rem; font-weight: bold; margin-bottom: 15px; }
+        .titles { color: #888; font-size: 0.95rem; font-style: italic; line-height: 1.8; }
 
-        .contact-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 700;
-            border-bottom: 1px solid var(--accent);
-        }
-        
-        .math-symbol {
-            color: var(--highlight);
-            font-family: 'JetBrains Mono', monospace;
-        }
+        /* HIRING ROBUSTO */
+        .hiring { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 12px; padding: 40px; text-align: left; }
+        .role { margin-bottom: 40px; border-left: 2px solid #00e5ff; padding-left: 20px; }
+        .role-title { font-weight: bold; font-size: 1.3rem; color: #fff; display: block; margin-bottom: 10px; }
+        .role-desc { color: #999; font-size: 0.95rem; line-height: 1.6; }
+        .compensation { display: block; margin-top: 10px; color: #00e5ff; font-weight: bold; font-size: 0.85rem; }
+
+        .contact { margin-top: 40px; font-size: 1.1rem; text-align: center; }
+        .contact a { color: #00e5ff; text-decoration: none; font-weight: bold; border-bottom: 1px solid #00e5ff; }
+
+        .footer { margin-top: 100px; font-size: 0.8rem; color: #222; text-align: center; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="stealth-badge">Strategic Stealth Mode // Delaware</div>
-        <h1>VUXMAZ <span class="math-symbol">Σ</span></h1>
-        <p class="hero-subtext">
-            Redefiniendo los cimientos de la computación transversal. 
-            No estamos construyendo capas adicionales; estamos re-arquitectando la lógica del procesamiento global.
-        </p>
-    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Misión</a>
+        <a href="#leader">Founder</a>
+        <a href="#hiring">Hiring</a>
+        <a href="#contact">Contacto</a>
+    </nav>
 
-    <section id="about">
-        <div class="grid">
-            <div>
-                <h2>Misión</h2>
-                <p>Desplegar una tecnología de frontera que rompa los paradigmas actuales de la computación masiva, blindando la propiedad intelectual que permitirá la próxima evolución sistémica del procesamiento de datos.</p>
+    <div class="container">
+        <section id="home" style="border:none;">
+            <img src="logo.png" alt="VUXMAZ" class="logo">
+            <div class="tagline">High-Performance Computational Architectures</div>
+        </section>
+
+        <section id="about">
+            <div class="grid-info">
+                <div>
+                    <h3>Misión</h3>
+                    <p>Desplegar tecnología de frontera para redefinir los cimientos de la computación transversal, blindando la propiedad intelectual que permitirá la próxima evolución sistémica del procesamiento global.</p>
+                </div>
+                <div>
+                    <h3>Visión</h3>
+                    <p>Convertirnos en el nuevo estándar de infraestructura lógica, operando en el núcleo de cada proceso computacional crítico mediante arquitecturas disruptivas protegidas.</p>
+                </div>
             </div>
-            <div>
-                <h2>Visión</h2>
-                <p>Convertirnos en el nuevo estándar de infraestructura lógica global, operando en el núcleo de cada proceso computacional crítico del planeta.</p>
+        </section>
+
+        <section id="leader">
+            <div class="leader">
+                <div class="leader-name">Américo Hurtado Lizarme</div>
+                <div class="titles">
+                    CEO & Founder | Ph.D. Candidate in Mathematics<br>
+                    M.Sc. Mathematics (Stochastic Calculus) & Finance<br>
+                    Certified Auditor & Quantitative Researcher | Inventor & IP Owner
+                </div>
             </div>
+        </section>
+
+        <section id="hiring">
+            <div class="hiring">
+                <h2>Leadership Acquisition</h2>
+                
+                <div class="role">
+                    <span class="role-title">Chief of Staff (CoS)</span>
+                    <p class="role-desc">Perfil: MBA (Univ. de San Andrés). Brazo derecho estratégico para la formación legal en Delaware y ejecución del plan de reclutamiento de élite en 60 días.</p>
+                    <span class="compensation">Escalamiento: $2.500 ➞ $8.000 USD + 1.5% Equity.</span>
+                </div>
+
+                <div class="role">
+                    <span class="role-title">5x Chief Technology Officers (CTO)</span>
+                    <p class="role-desc">Perfil: Arquitectos de Sistemas. Especialistas en sistemas de alta concurrencia y desarrollo avanzado en <strong>RUST</strong>.</p>
+                    <span class="compensation">Hito: Construcción de la PoC para validación de PI.</span>
+                </div>
+
+                <p class="contact">Direct applications: <a href="mailto:americo@vuxmaz.com">americo@vuxmaz.com</a></p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact">
+                <p>WhatsApp: +56 9 7366 5969</p>
+                <p style="color: #444; font-size: 0.8rem;">Delaware, USA | Santiago, Chile</p>
+            </div>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 VUXMAZ GLOBAL. PROPRIETARY ARCHITECTURE. INTELLECTUAL PROPERTY PROTECTED.
         </div>
-    </section>
-
-    <section id="careers">
-        <h2>Oportunidades Génesis</h2>
-        <p>Buscamos al núcleo fundador para materializar una tecnología protegida por dos Propiedades Intelectuales disruptivas.</p>
-        
-        <div class="grid">
-            <div class="card">
-                <span class="job-tag">MANAGEMENT</span>
-                <div class="job-title">Chief of Staff (CoS)</div>
-                <p>Brazo derecho operativo del CEO. Responsable de la formación legal en Delaware y reclutamiento del núcleo técnico.</p>
-                <p><strong>Compensación:</strong> Escalamiento hasta $8.000 USD + 1.5% Equity.</p>
-            </div>
-
-            <div class="card">
-                <span class="job-tag">ENGINEERING</span>
-                <div class="job-title">5x CTOs (Tier 1)</div>
-                <p>Especialistas en <strong>Rust</strong> de alto rendimiento para construir la PoC que validará la PI en entornos de frontera.</p>
-                <p><strong>Foco:</strong> Gestión de memoria, concurrencia y sistemas de baja latencia.</p>
-            </div>
-
-            <div class="card">
-                <span class="job-tag">OPERATIONS</span>
-                <div class="job-title">1x COO (Tier 1)</div>
-                <p>Arquitecto de operaciones globales para escalar la infraestructura técnica y administrativa post-ronda Seed.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contacto Privado</h2>
-        <p>Para consultas estratégicas o postulaciones de alto nivel:</p>
-        <p><a href="mailto:americo@vuxmaz.com" class="contact-link">americo@vuxmaz.com</a></p>
-        <p>WhatsApp: +56 9 7366 5969</p>
-    </section>
-
-    <div class="footer">
-        © 2026 VUXMAZ Inc. | Delaware, USA | <span class="math-symbol">∫</span> Deep Tech Research
     </div>
 
 </body>
